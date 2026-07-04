@@ -96,7 +96,7 @@ export default function Contact() {
             <h3 className={styles.infoTitle}>Let&apos;s build something memorable</h3>
             <div className={styles.contactItem}>
               <FaEnvelope size={16} className="neon-text" />
-              <a className={styles.contactLink} href="mailto:manishtochand@email.com">manishtochand@email.com</a>
+              <a className={styles.contactLink} href="mailto:manishtochand@email.com">manishtochand@gmail.com</a>
             </div>
             <div className={styles.socials}>
               <a href="https://www.linkedin.com/in/manish-chand-3b7b4a158/" aria-label="LinkedIn"><FaLinkedin size={18} /></a>
