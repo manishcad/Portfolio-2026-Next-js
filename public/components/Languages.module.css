@@ -1,0 +1,57 @@
+.languages {
+  background: var(--background);
+  min-height: 70vh;
+}
+
+.card {
+  max-width: 900px;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.languageItem {
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.fluency {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--primary-neon));
+  box-shadow: 0 0 10px var(--glow);
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,71 @@
+.education {
+  background: radial-gradient(circle at top, var(--secondary-bg) 0%, var(--background) 100%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+}
+
+.card {
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.cardHeader h3 {
+  font-size: 1.8rem;
+}
+
+.cardContent h4 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.cardContent p {
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.cardContent span {
+  font-weight: 600;
+}
+
+.cardContent ul {
+  list-style: none;
+}
+
+.cardContent ul li {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.cardContent ul li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: var(--primary-neon);
+  font-size: 0.8rem;
+  top: 2px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

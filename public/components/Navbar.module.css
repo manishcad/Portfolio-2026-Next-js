@@ -1,0 +1,87 @@
+.navbar {
+  position: fixed;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.navContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 15px;
+  border-radius: 50px;
+  padding: 15px 10px;
+}
+
+.navItem {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+
+.navItem:hover {
+  color: var(--primary-neon);
+  background: rgba(0, 229, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.navItem.active {
+  color: var(--primary-neon);
+}
+
+.activeIndicator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--primary-neon);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--glow);
+  z-index: -1;
+}
+
+.tooltip {
+  position: absolute;
+  left: 60px;
+  background: var(--secondary-bg);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+}
+
+.navItem:hover .tooltip {
+  opacity: 1;
+  left: 55px;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    left: 50%;
+    top: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+  }
+
+  .navContainer {
+    flex-direction: row;
+    padding: 10px 15px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}

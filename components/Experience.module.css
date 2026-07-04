@@ -1,0 +1,145 @@
+.experience {
+  background: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.summary {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, var(--primary-neon), transparent);
+  box-shadow: 0 0 10px var(--glow);
+}
+
+.timelineItem {
+  position: relative;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.timelineItem:nth-child(odd) {
+  left: 0;
+  padding-right: 36px;
+  text-align: right;
+}
+
+.timelineItem:nth-child(even) {
+  left: 50%;
+  padding-left: 36px;
+  text-align: left;
+}
+
+.node {
+  position: absolute;
+  top: 28px;
+  width: 16px;
+  height: 16px;
+  background: var(--primary-neon);
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(0, 229, 255, 0.16);
+  z-index: 1;
+}
+
+.timelineItem:nth-child(odd) .node {
+  right: -8px;
+}
+
+.timelineItem:nth-child(even) .node {
+  left: -8px;
+}
+
+.content {
+  padding: 24px 26px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(135deg, rgba(9, 15, 30, 0.95), rgba(7, 11, 24, 0.82));
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.role {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.company {
+  color: var(--primary-neon);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.duration {
+  display: inline-flex;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 229, 255, 0.2);
+  background: rgba(0, 229, 255, 0.08);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.description {
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .line {
+    left: 20px;
+  }
+
+  .timelineItem {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .timelineItem:nth-child(odd) {
+    left: 0;
+    padding-left: 36px;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timelineItem:nth-child(even) {
+    left: 0;
+    padding-left: 36px;
+  }
+
+  .node, .timelineItem:nth-child(odd) .node, .timelineItem:nth-child(even) .node {
+    left: 12px;
+  }
+}
